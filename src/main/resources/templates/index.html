@@ -22,11 +22,13 @@
 			</div>
 		</div>
 		<div class="login-form">
-			<img alt="user" src="@{img/user-icon.png}" /> 
-			<input type="text" placeholder="usuario..." /> 
-			<input type="password" placeholder="contraseña..." />
-			<button type="submit">iniciar sesión</button>
-			<span>No tengo una cuenta</span>
+			<img alt="user" th:src="@{img/user-icon.png}" width="100"/> 
+			<input type="text" class="input" placeholder="usuario..." /> 
+			<input type="password" class="input" placeholder="contraseña..." />
+			<div class="item">
+				<button type="submit">iniciar sesión</button>
+				<a href="#">No tengo una cuenta</a>
+			</div>
 		</div>
 	</div>
 </body>
