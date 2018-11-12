@@ -1,0 +1,13 @@
+<form th:fragment="registro" class="register-form">
+	<div>
+		<h2 class="title">regístrate</h2>
+	</div>
+	<input type="text" class="input" placeholder="usuario..." /> 
+	<input type="password" class="input" placeholder="contraseña..." />
+	<input type="password" class="input" placeholder="repita su contraseña..." />
+		
+	<div class="item">
+		<button type="submit">aceptar</button>
+		<a th:href="login">Ya tengo una cuenta</a>
+	</div>
+</form>

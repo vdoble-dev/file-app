@@ -14,7 +14,7 @@ public class LoginController {
 		if (user != null)
 			return "redirect:/";
 		
-		return "login";
+		return "index";
 	}
 	
 }
