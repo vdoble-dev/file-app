@@ -1,0 +1,11 @@
+<form th:fragment="upload" class="upload-form">
+	<h2 class="upload-title">Sube un Archivo</h2>
+	<img alt="file" th:src="@{img/file-icon.png}" width="128px" />
+
+	<div class="input-file-wrapper">
+		<input class="input" type="text" placeholder="elija un archivo..." />
+		<label class="input-file"> <input type="file" /> <img
+			alt="upload" th:src="@{img/upload-icon-2.png}" width="34px" />
+		</label>
+	</div>
+</form>

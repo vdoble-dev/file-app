@@ -4,13 +4,24 @@
     --gray1: #E8E8E8;
     --gray2: #C3C3C3;
     --grayInputLogin: #767676;
-    --textColorButton: #624B0F;
+    --brown: #624B0F;
 }
 
 
 body {
 	background-color: var(--yellow); 
 	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	display: inline-block;
+	color: var(--grayInputLogin);
+	text-decoration: underline;
+	font-size: .8em;
+}
+
+a:hover {
+	color: var(--brown);
 }
 
 .input {
@@ -41,7 +52,7 @@ body {
 
 .input-file:hover {
 	
-	border-color: var(--yellow);
+	background-color: var(--brown);
 }
 
 input[type="file"] {
@@ -93,24 +104,19 @@ input[type="file"] {
 	background-color: var(--yellow);
 	border: none;
 	padding: 10px 15px;
-	height: 35px;
+	height: 47px;
 	text-transform: uppercase;
 	font-weight: bold;
 	width: 50%;
 	cursor: pointer;
-	color: var(--textColorButton);
+	color: var(--brown);
 	border: 1px solid transparent;
 }
 
 .login-form button:hover {
-	border: 1px solid var(--textColorButton);
+	border: 1px solid var(--brown);
 }
 
-.item a {
-	display: inline-block;
-	color: var(--grayInputLogin);
-	text-decoration: underline;
-}
 .item {
 	width: 88%;
 	display: flex;

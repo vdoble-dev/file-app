@@ -9,27 +9,9 @@
 </head>
 <body>
 	<div class="content">
-		<div class="upload-form">
-			<h2 class="upload-title">Sube un Archivo</h2>
-			<img alt="file" th:src="@{img/file-icon.png}" width="128px" />
-			
-			<div class="input-file-wrapper">			
-				<input class="input" type="text" placeholder="elija un archivo..." />
-				<label class="input-file">
-					<input type="file" />
-					<img alt="upload" th:src="@{img/upload-icon-2.png}" width="34px"/>
-				</label>
-			</div>
-		</div>
-		<div class="login-form">
-			<img alt="user" th:src="@{img/user-icon.png}" width="100"/> 
-			<input type="text" class="input" placeholder="usuario..." /> 
-			<input type="password" class="input" placeholder="contraseña..." />
-			<div class="item">
-				<button type="submit">iniciar sesión</button>
-				<a href="#">No tengo una cuenta</a>
-			</div>
-		</div>
+		<div th:replace="fragments/upload.html :: upload"></div>
+		<div th:replace="fragments/login.html :: login"></div>
 	</div>
+	<script th:src="@{js/app.js}"></script>
 </body>
 </html>
