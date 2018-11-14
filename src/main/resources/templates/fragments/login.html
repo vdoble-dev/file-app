@@ -1,6 +1,9 @@
-<form th:fragment="login" class="login-form">
-	<img alt="user" th:src="@{img/user-icon.png}" width="100" /> <input
-		type="text" class="input" placeholder="usuario..." /> <input
+<form th:fragment="login" class="login-form" method="POST" th:action="@{/login}">
+	<img alt="user" th:src="@{img/user-icon.png}" width="100" /> 
+	<input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+	<input name="username"
+		type="text" class="input" placeholder="usuario..." /> 
+	<input name="password"
 		type="password" class="input" placeholder="contraseña..." />
 	<div class="item">
 		<button type="submit">iniciar sesión</button>

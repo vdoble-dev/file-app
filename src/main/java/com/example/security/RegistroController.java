@@ -8,27 +8,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.service.RegistroService;
+
 @Controller
 @RequestMapping("/registro")
 public class RegistroController {
 
 	@Autowired
-	private UserRepo userRepo;
+	private RegistroService registroService;
 
-	@Autowired
-	private PasswordEncoder passEnconder;
 
 	@GetMapping
-	public String registration(@AuthenticationPrincipal User user) {
-		if (user != null)
-			return "redirect:/";
+	public String registration(@AuthenticationPrincipal User usuario) {
+		if (usuario != null)
+			return "archivos";
 		return "registro";
 	}
 
 	@PostMapping
-	public String registrar(User user) {
-		user.setPassword(passEnconder.encode(user.getPassword()));
-		userRepo.save(user);
-		return "redirect:/login";
+	public String registrar(User usuario) {
+		registroService.registrar(usuario);
+		return "archivos";
 	}
 }

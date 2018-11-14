@@ -1,10 +1,11 @@
-<form th:fragment="registro" class="register-form">
+<form th:fragment="registro" class="register-form" method="POST" th:action="@{/registro}">
 	<div>
 		<h2 class="title">regístrate</h2>
 	</div>
-	<input type="text" class="input" placeholder="usuario..." /> 
-	<input type="password" class="input" placeholder="contraseña..." />
-	<input type="password" class="input" placeholder="repita su contraseña..." />
+	<input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+	<input type="text" class="input" name="username" placeholder="usuario..." /> 
+	<input type="password" class="input" name="password" placeholder="contraseña..." />
+	<input type="password" class="input" name="confirm" placeholder="repita su contraseña..." />
 		
 	<div class="item">
 		<button type="submit">aceptar</button>

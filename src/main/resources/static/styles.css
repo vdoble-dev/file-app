@@ -126,4 +126,5 @@ input[type="file"] {
 
 .register-form .title{
 	text-transform: uppercase;
+	color: var(--grayInputLogin);
 }
